@@ -850,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.OculusTouchControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -1191,23 +1191,23 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.OpenXRSettings
   features:
-  - {fileID: 6638364991769482473}
+  - {fileID: 12098648438129156}
   - {fileID: 3276851400821845968}
-  - {fileID: -2420157748452181253}
-  - {fileID: -2120246498642557350}
-  - {fileID: 4779411035664894706}
-  - {fileID: -1127562044021804256}
+  - {fileID: -6201484647372555646}
+  - {fileID: -4076035693873474663}
+  - {fileID: 2706719334095582180}
+  - {fileID: -5813884225124357477}
   - {fileID: 3546158898054207926}
-  - {fileID: 4257788499840037823}
+  - {fileID: 2009153059817449483}
   - {fileID: -6948706606066048966}
-  - {fileID: 8514937656539083690}
+  - {fileID: 6784195519926505708}
   - {fileID: -8912793355402964235}
   - {fileID: -3530905170321330725}
-  - {fileID: 6827252655435561537}
+  - {fileID: -1447140317200666078}
   - {fileID: -5474429624730023663}
   - {fileID: 4816967232782403157}
   - {fileID: 825016890906023119}
-  - {fileID: 2578563059796425039}
+  - {fileID: -5429152481752914192}
   - {fileID: -4181601343012635241}
   - {fileID: 1898395271995630050}
   - {fileID: -5444417346446206588}
