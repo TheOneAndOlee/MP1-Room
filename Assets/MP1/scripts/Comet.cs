@@ -5,15 +5,33 @@ using Random = System.Random;
 public class Comet : MonoBehaviour
 {
     public Vector3 velocity;
-
+    public float lifespan = 5.0f;
+    public GameObject particlePrefab;
+    public bool speedDefined = false;
+    
     void Start()
     {
         // Random initial velocity
-        velocity = new Vector3(UnityEngine.Random.Range(0.0f, 5.0f), 
-                               UnityEngine.Random.Range(0.0f, 5.0f), 
-                               UnityEngine.Random.Range(0.0f, 5.0f));
+        if (!speedDefined)
+        {
+            velocity = new Vector3(UnityEngine.Random.Range(0.0f, 5.0f), 
+                UnityEngine.Random.Range(0.0f, 5.0f), 
+                UnityEngine.Random.Range(0.0f, 5.0f));
+        }
         
         
+    }
+
+    private void Awake()
+    {
+        Destroy(gameObject, lifespan);
+    }
+    
+    private void OnDestroy()
+    {
+        Debug.Log("Destroying Comet");
+        GameObject particles = Instantiate(particlePrefab, transform.position, transform.rotation);
+        particles.GetComponent<AudioSource>().Play();
     }
 
     void Update()
@@ -32,5 +50,4 @@ public class Comet : MonoBehaviour
 
         transform.position += velocity * Time.deltaTime;
     }
-
 }

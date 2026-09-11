@@ -10,11 +10,21 @@ public class PointLightScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void OnToggleLight()
+    public void ChangeColor()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+
+        light.color = new Color(UnityEngine.Random.Range(0.2f, 1f), UnityEngine.Random.Range(0.2f, 1f), UnityEngine.Random.Range(0.2f, 1f), UnityEngine.Random.Range(0.75f, 1f));
+        foreach (AudioSource a in GetComponents<AudioSource>())
         {
-            light.color = new Color(1, 0.2f, 0.3f, 1);
+            if (!a.loop)
+            {
+                a.Play();
+            }
         }
+        ParticleSystem.MainModule mm = GetComponent<ParticleSystem>().GetComponent<ParticleSystem>().main;
+        mm.startColor = light.color;
+        GetComponent<ParticleSystem>().Stop();
+        GetComponent<ParticleSystem>().Play();
     }
+    
 }
